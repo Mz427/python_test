@@ -5,5 +5,6 @@ class HelloWorld:
     
     def add(self):
         return self.i + self.j
+
     def minus(self):
         return self.i - self.j
