@@ -13,7 +13,7 @@ def rename_files(directory, str_old, str_new):
                 print(f"Renaming '{filename_old}' to '{filename_new}'")
 
 # Example usage:
-# rename_files("/path/to/directory", "search", "old", "new")
+# rename_files("/path/to/directory", "old", "new")
 if __name__ == "__main__":
     dir_path = input("Enter the directory path: ")
     str_old = input("Enter the string to be replaced: ")
