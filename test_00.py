@@ -1,16 +1,13 @@
 import unittest
+import random
 import algorithm_of_sorting
 
 class TestHelloWorld(unittest.TestCase):
     def setUp(self):
-        self.l_example = [5, 3, 8, 6, 7, 2]
-        self.c_example = algorithm_of_sorting.AlgorithmOfSorting(self.l_example)
-
+        self.l_example = [random.randint(1, 10) for _ in range(10)]
 
     def test_AlgorithmOfSorting(self):
-        self.c_example.bubble_sort()
-        self.assertEqual(self.c_example.l_to_sort, [2, 3, 5, 6, 7, 8])
-
+        self.assertEqual(algorithm_of_sorting.bubble_sort(self.l_example[:]), sorted(self.l_example))
 
 if __name__ == "__main__":
     unittest.main()
