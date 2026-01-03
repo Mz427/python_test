@@ -1,10 +1,3 @@
 class HelloWorld:
-    def __init__(self, i, j):
+    def __init__(self, i):
         self.i = i
-        self.j = j
-    
-    def add(self):
-        return self.i + self.j
-
-    def minus(self):
-        return self.i - self.j

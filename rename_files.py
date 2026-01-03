@@ -1,5 +1,6 @@
 # This is a script to rename a lot of files in a directory
 import os
+import sys
 import re
 
 def rename_files(directory, str_old, str_new):
@@ -15,8 +16,6 @@ def rename_files(directory, str_old, str_new):
 # Example usage:
 # rename_files("/path/to/directory", "old", "new")
 if __name__ == "__main__":
-    dir_path = input("Enter the directory path: ")
-    str_old = input("Enter the string to be replaced: ")
-    str_new = input("Enter the new string: ")
+    dir_path, str_old, str_new = sys.argv[1], sys.argv[2], sys.argv[3]
     rename_files(dir_path, str_old, str_new)
     print("Files renamed successfully.")
