@@ -1,13 +1,15 @@
 import numpy
 
 class HelloWorld:
-    def __init__(self, i):
-        self.i = i
+    def __init__(self):
+        self.i = numpy.array([[['a', 'b', 'c'], ['d', 'e', 'f']],
+                              [['g', 'h', 'i'], ['j', 'k', 'l']]])
 
-    def say_hello_world(self):
-        print(self.i[::-1])
-        print(self.i)
+    def hello_world(self):
+        x, y, z = 1, 0, 2
+        print(x, y, z)
+        print(self.i[x, y, z])
 
 if __name__ == "__main__":
-    hello_world = HelloWorld([1, 2, 3, 4, 5])
-    hello_world.say_hello_world()
+    hello_world = HelloWorld()
+    hello_world.hello_world()
